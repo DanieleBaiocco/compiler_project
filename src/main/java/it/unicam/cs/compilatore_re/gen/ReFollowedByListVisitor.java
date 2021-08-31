@@ -96,4 +96,18 @@ public interface ReFollowedByListVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitFromListToSequence(ReFollowedByListParser.FromListToSequenceContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code digitFollowedByString}
+	 * labeled alternative in {@link ReFollowedByListParser#string}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDigitFollowedByString(ReFollowedByListParser.DigitFollowedByStringContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code singleDigit}
+	 * labeled alternative in {@link ReFollowedByListParser#string}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSingleDigit(ReFollowedByListParser.SingleDigitContext ctx);
 }

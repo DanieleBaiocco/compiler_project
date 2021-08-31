@@ -23,7 +23,7 @@ public class ThompsonNFARunner {
         ReFollowedByListParser parser = new ReFollowedByListParser(commonTokenStream);
         ParseTree parseTree = parser.s();
 
-         ThompsonNFAEvalVisitor visitor= new ThompsonNFAEvalVisitor();
+        ThompsonNFAEvalVisitor visitor = new ThompsonNFAEvalVisitor();
         ThompsonNFASynthAttr a = visitor.visit(parseTree);
         System.out.println(a.getResult());
     }

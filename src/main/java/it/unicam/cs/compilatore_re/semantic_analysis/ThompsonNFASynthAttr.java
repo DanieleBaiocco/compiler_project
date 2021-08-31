@@ -3,7 +3,10 @@ package it.unicam.cs.compilatore_re.semantic_analysis;
 import it.unicam.cs.compilatore_re.thompsonNFA.ThompsonNFA;
 
 
-//Probabilmente il prof vuole la stampa come side effect, quindi forse devi levare la stringa result
+/**
+ * Contiene al suo interno due attributi sintetizzati: un'istanza dell'NFA Thompson e una stringa che, nella radice dell'albero,
+ * conterrà l'output del programma da stampare a video.
+ */
 public class ThompsonNFASynthAttr {
     private ThompsonNFA thompsonNFA;
     private String result;

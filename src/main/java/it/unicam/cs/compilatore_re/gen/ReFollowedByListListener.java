@@ -153,4 +153,28 @@ public interface ReFollowedByListListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFromListToSequence(ReFollowedByListParser.FromListToSequenceContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code digitFollowedByString}
+	 * labeled alternative in {@link ReFollowedByListParser#string}.
+	 * @param ctx the parse tree
+	 */
+	void enterDigitFollowedByString(ReFollowedByListParser.DigitFollowedByStringContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code digitFollowedByString}
+	 * labeled alternative in {@link ReFollowedByListParser#string}.
+	 * @param ctx the parse tree
+	 */
+	void exitDigitFollowedByString(ReFollowedByListParser.DigitFollowedByStringContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code singleDigit}
+	 * labeled alternative in {@link ReFollowedByListParser#string}.
+	 * @param ctx the parse tree
+	 */
+	void enterSingleDigit(ReFollowedByListParser.SingleDigitContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code singleDigit}
+	 * labeled alternative in {@link ReFollowedByListParser#string}.
+	 * @param ctx the parse tree
+	 */
+	void exitSingleDigit(ReFollowedByListParser.SingleDigitContext ctx);
 }

@@ -19,14 +19,13 @@ public class ReFollowedByListParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, ALPHDIGIT=7, SEQUENCE=8, 
-		WS=9;
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, ALPHDIGIT=7, WS=8;
 	public static final int
 		RULE_s = 0, RULE_regularExpr = 1, RULE_term = 2, RULE_u = 3, RULE_w = 4, 
-		RULE_stringsToCheck = 5;
+		RULE_stringsToCheck = 5, RULE_string = 6;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"s", "regularExpr", "term", "u", "w", "stringsToCheck"
+			"s", "regularExpr", "term", "u", "w", "stringsToCheck", "string"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -39,7 +38,7 @@ public class ReFollowedByListParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, null, null, null, null, "ALPHDIGIT", "SEQUENCE", "WS"
+			null, null, null, null, null, null, null, "ALPHDIGIT", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -134,11 +133,11 @@ public class ReFollowedByListParser extends Parser {
 			_localctx = new RegularExprFollowedByStringsContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(12);
-			regularExpr(0);
-			setState(13);
-			match(T__0);
 			setState(14);
+			regularExpr(0);
+			setState(15);
+			match(T__0);
+			setState(16);
 			stringsToCheck();
 			}
 		}
@@ -226,14 +225,14 @@ public class ReFollowedByListParser extends Parser {
 			_ctx = _localctx;
 			_prevctx = _localctx;
 
-			setState(17);
+			setState(19);
 			term(0);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(24);
+			setState(26);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,0,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -241,16 +240,16 @@ public class ReFollowedByListParser extends Parser {
 					{
 					_localctx = new RegularExprPlusTermContext(new RegularExprContext(_parentctx, _parentState));
 					pushNewRecursionContext(_localctx, _startState, RULE_regularExpr);
-					setState(19);
-					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(20);
-					match(T__1);
 					setState(21);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(22);
+					match(T__1);
+					setState(23);
 					term(0);
 					}
 					} 
 				}
-				setState(26);
+				setState(28);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,0,_ctx);
 			}
@@ -340,14 +339,14 @@ public class ReFollowedByListParser extends Parser {
 			_ctx = _localctx;
 			_prevctx = _localctx;
 
-			setState(28);
+			setState(30);
 			u();
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(34);
+			setState(36);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,1,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -355,14 +354,14 @@ public class ReFollowedByListParser extends Parser {
 					{
 					_localctx = new TermConcatUContext(new TermContext(_parentctx, _parentState));
 					pushNewRecursionContext(_localctx, _startState, RULE_term);
-					setState(30);
+					setState(32);
 					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-					setState(31);
+					setState(33);
 					u();
 					}
 					} 
 				}
-				setState(36);
+				setState(38);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,1,_ctx);
 			}
@@ -433,16 +432,16 @@ public class ReFollowedByListParser extends Parser {
 		UContext _localctx = new UContext(_ctx, getState());
 		enterRule(_localctx, 6, RULE_u);
 		try {
-			setState(41);
+			setState(43);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 			case 1:
 				_localctx = new FromUToWKleenContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(37);
+				setState(39);
 				w();
-				setState(38);
+				setState(40);
 				match(T__2);
 				}
 				break;
@@ -450,7 +449,7 @@ public class ReFollowedByListParser extends Parser {
 				_localctx = new FromUToWContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(40);
+				setState(42);
 				w();
 				}
 				break;
@@ -535,14 +534,14 @@ public class ReFollowedByListParser extends Parser {
 		WContext _localctx = new WContext(_ctx, getState());
 		enterRule(_localctx, 8, RULE_w);
 		try {
-			setState(49);
+			setState(51);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ALPHDIGIT:
 				_localctx = new FromWToAlphDigitContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(43);
+				setState(45);
 				match(ALPHDIGIT);
 				}
 				break;
@@ -550,7 +549,7 @@ public class ReFollowedByListParser extends Parser {
 				_localctx = new FromWToEpsilonContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(44);
+				setState(46);
 				match(T__3);
 				}
 				break;
@@ -558,11 +557,11 @@ public class ReFollowedByListParser extends Parser {
 				_localctx = new FromWToRegularExprContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(45);
-				match(T__4);
-				setState(46);
-				regularExpr(0);
 				setState(47);
+				match(T__4);
+				setState(48);
+				regularExpr(0);
+				setState(49);
 				match(T__5);
 				}
 				break;
@@ -593,7 +592,9 @@ public class ReFollowedByListParser extends Parser {
 		}
 	}
 	public static class FromListToSequenceContext extends StringsToCheckContext {
-		public TerminalNode SEQUENCE() { return getToken(ReFollowedByListParser.SEQUENCE, 0); }
+		public StringContext string() {
+			return getRuleContext(StringContext.class,0);
+		}
 		public FromListToSequenceContext(StringsToCheckContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -610,7 +611,9 @@ public class ReFollowedByListParser extends Parser {
 		}
 	}
 	public static class SequenceFollowedByListContext extends StringsToCheckContext {
-		public TerminalNode SEQUENCE() { return getToken(ReFollowedByListParser.SEQUENCE, 0); }
+		public StringContext string() {
+			return getRuleContext(StringContext.class,0);
+		}
 		public StringsToCheckContext stringsToCheck() {
 			return getRuleContext(StringsToCheckContext.class,0);
 		}
@@ -634,18 +637,18 @@ public class ReFollowedByListParser extends Parser {
 		StringsToCheckContext _localctx = new StringsToCheckContext(_ctx, getState());
 		enterRule(_localctx, 10, RULE_stringsToCheck);
 		try {
-			setState(55);
+			setState(58);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
 			case 1:
 				_localctx = new SequenceFollowedByListContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(51);
-				match(SEQUENCE);
-				setState(52);
-				match(T__0);
 				setState(53);
+				string();
+				setState(54);
+				match(T__0);
+				setState(55);
 				stringsToCheck();
 				}
 				break;
@@ -653,8 +656,95 @@ public class ReFollowedByListParser extends Parser {
 				_localctx = new FromListToSequenceContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(54);
-				match(SEQUENCE);
+				setState(57);
+				string();
+				}
+				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class StringContext extends ParserRuleContext {
+		public StringContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_string; }
+	 
+		public StringContext() { }
+		public void copyFrom(StringContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	public static class SingleDigitContext extends StringContext {
+		public TerminalNode ALPHDIGIT() { return getToken(ReFollowedByListParser.ALPHDIGIT, 0); }
+		public SingleDigitContext(StringContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFollowedByListListener ) ((ReFollowedByListListener)listener).enterSingleDigit(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFollowedByListListener ) ((ReFollowedByListListener)listener).exitSingleDigit(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFollowedByListVisitor ) return ((ReFollowedByListVisitor<? extends T>)visitor).visitSingleDigit(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class DigitFollowedByStringContext extends StringContext {
+		public TerminalNode ALPHDIGIT() { return getToken(ReFollowedByListParser.ALPHDIGIT, 0); }
+		public StringContext string() {
+			return getRuleContext(StringContext.class,0);
+		}
+		public DigitFollowedByStringContext(StringContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFollowedByListListener ) ((ReFollowedByListListener)listener).enterDigitFollowedByString(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ReFollowedByListListener ) ((ReFollowedByListListener)listener).exitDigitFollowedByString(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ReFollowedByListVisitor ) return ((ReFollowedByListVisitor<? extends T>)visitor).visitDigitFollowedByString(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final StringContext string() throws RecognitionException {
+		StringContext _localctx = new StringContext(_ctx, getState());
+		enterRule(_localctx, 12, RULE_string);
+		try {
+			setState(63);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
+			case 1:
+				_localctx = new DigitFollowedByStringContext(_localctx);
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(60);
+				match(ALPHDIGIT);
+				setState(61);
+				string();
+				}
+				break;
+			case 2:
+				_localctx = new SingleDigitContext(_localctx);
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(62);
+				match(ALPHDIGIT);
 				}
 				break;
 			}
@@ -695,22 +785,23 @@ public class ReFollowedByListParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13<\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3"+
-		"\3\3\7\3\31\n\3\f\3\16\3\34\13\3\3\4\3\4\3\4\3\4\3\4\7\4#\n\4\f\4\16\4"+
-		"&\13\4\3\5\3\5\3\5\3\5\5\5,\n\5\3\6\3\6\3\6\3\6\3\6\3\6\5\6\64\n\6\3\7"+
-		"\3\7\3\7\3\7\5\7:\n\7\3\7\2\4\4\6\b\2\4\6\b\n\f\2\2\2;\2\16\3\2\2\2\4"+
-		"\22\3\2\2\2\6\35\3\2\2\2\b+\3\2\2\2\n\63\3\2\2\2\f9\3\2\2\2\16\17\5\4"+
-		"\3\2\17\20\7\3\2\2\20\21\5\f\7\2\21\3\3\2\2\2\22\23\b\3\1\2\23\24\5\6"+
-		"\4\2\24\32\3\2\2\2\25\26\f\4\2\2\26\27\7\4\2\2\27\31\5\6\4\2\30\25\3\2"+
-		"\2\2\31\34\3\2\2\2\32\30\3\2\2\2\32\33\3\2\2\2\33\5\3\2\2\2\34\32\3\2"+
-		"\2\2\35\36\b\4\1\2\36\37\5\b\5\2\37$\3\2\2\2 !\f\4\2\2!#\5\b\5\2\" \3"+
-		"\2\2\2#&\3\2\2\2$\"\3\2\2\2$%\3\2\2\2%\7\3\2\2\2&$\3\2\2\2\'(\5\n\6\2"+
-		"()\7\5\2\2),\3\2\2\2*,\5\n\6\2+\'\3\2\2\2+*\3\2\2\2,\t\3\2\2\2-\64\7\t"+
-		"\2\2.\64\7\6\2\2/\60\7\7\2\2\60\61\5\4\3\2\61\62\7\b\2\2\62\64\3\2\2\2"+
-		"\63-\3\2\2\2\63.\3\2\2\2\63/\3\2\2\2\64\13\3\2\2\2\65\66\7\n\2\2\66\67"+
-		"\7\3\2\2\67:\5\f\7\28:\7\n\2\29\65\3\2\2\298\3\2\2\2:\r\3\2\2\2\7\32$"+
-		"+\639";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\nD\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\3\2\3\2\3\2\3\2\3\3\3\3\3\3"+
+		"\3\3\3\3\3\3\7\3\33\n\3\f\3\16\3\36\13\3\3\4\3\4\3\4\3\4\3\4\7\4%\n\4"+
+		"\f\4\16\4(\13\4\3\5\3\5\3\5\3\5\5\5.\n\5\3\6\3\6\3\6\3\6\3\6\3\6\5\6\66"+
+		"\n\6\3\7\3\7\3\7\3\7\3\7\5\7=\n\7\3\b\3\b\3\b\5\bB\n\b\3\b\2\4\4\6\t\2"+
+		"\4\6\b\n\f\16\2\2\2C\2\20\3\2\2\2\4\24\3\2\2\2\6\37\3\2\2\2\b-\3\2\2\2"+
+		"\n\65\3\2\2\2\f<\3\2\2\2\16A\3\2\2\2\20\21\5\4\3\2\21\22\7\3\2\2\22\23"+
+		"\5\f\7\2\23\3\3\2\2\2\24\25\b\3\1\2\25\26\5\6\4\2\26\34\3\2\2\2\27\30"+
+		"\f\4\2\2\30\31\7\4\2\2\31\33\5\6\4\2\32\27\3\2\2\2\33\36\3\2\2\2\34\32"+
+		"\3\2\2\2\34\35\3\2\2\2\35\5\3\2\2\2\36\34\3\2\2\2\37 \b\4\1\2 !\5\b\5"+
+		"\2!&\3\2\2\2\"#\f\4\2\2#%\5\b\5\2$\"\3\2\2\2%(\3\2\2\2&$\3\2\2\2&\'\3"+
+		"\2\2\2\'\7\3\2\2\2(&\3\2\2\2)*\5\n\6\2*+\7\5\2\2+.\3\2\2\2,.\5\n\6\2-"+
+		")\3\2\2\2-,\3\2\2\2.\t\3\2\2\2/\66\7\t\2\2\60\66\7\6\2\2\61\62\7\7\2\2"+
+		"\62\63\5\4\3\2\63\64\7\b\2\2\64\66\3\2\2\2\65/\3\2\2\2\65\60\3\2\2\2\65"+
+		"\61\3\2\2\2\66\13\3\2\2\2\678\5\16\b\289\7\3\2\29:\5\f\7\2:=\3\2\2\2;"+
+		"=\5\16\b\2<\67\3\2\2\2<;\3\2\2\2=\r\3\2\2\2>?\7\t\2\2?B\5\16\b\2@B\7\t"+
+		"\2\2A>\3\2\2\2A@\3\2\2\2B\17\3\2\2\2\b\34&-\65<A";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

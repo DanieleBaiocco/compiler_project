@@ -11,18 +11,11 @@
 */
 
 grammar ReFollowedByList;
-/*
-topExpr
-:
-      expr EOF # exprEOF
-;*/
 
 @header {
    package it.unicam.cs.compilatore_re.gen;
 }
 
-
-//Fa il match con un' espressione regolare seguita da una virgola e da una lista di stringhe alfanumeriche.
 s
 :
    regularExpr ',' stringsToCheck  # regularExprFollowedByStrings
@@ -53,16 +46,19 @@ w :
    ;
 
 stringsToCheck:
-    SEQUENCE ',' stringsToCheck # sequenceFollowedByList
-    | SEQUENCE # fromListToSequence
+    string ',' stringsToCheck # sequenceFollowedByList
+    | string # fromListToSequence
 ;
+
+string:
+   ALPHDIGIT string  # digitFollowedByString
+   | ALPHDIGIT  # singleDigit
+   ;
 
 ALPHDIGIT :
    [a-zA-Z0-9]
    ;
-SEQUENCE:
-  [a-zA-Z0-9]+
-  ;
+
 WS
 :
      [ \t\r\n]+ -> skip

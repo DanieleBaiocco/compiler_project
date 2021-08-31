@@ -3,12 +3,30 @@
  */
 package it.unicam.cs.compilatore_re;
 
+import it.unicam.cs.compilatore_re.gen.ReFollowedByListLexer;
+import it.unicam.cs.compilatore_re.gen.ReFollowedByListParser;
+import it.unicam.cs.compilatore_re.semantic_analysis.ThompsonNFAEvalVisitor;
+import it.unicam.cs.compilatore_re.semantic_analysis.ThompsonNFASynthAttr;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
 import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.junit.Assert.*;
 
 public class ThompsonNFARunnerTest {
     @Test public void testAppHasAGreeting() {
-        ThompsonNFARunner classUnderTest = new ThompsonNFARunner();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        ReFollowedByListLexer lexer = new ReFollowedByListLexer(CharStreams.fromString("a + b c, a, b, bc, ad"));
+        CommonTokenStream commonTokenStream = new CommonTokenStream(lexer);
+        ReFollowedByListParser parser = new ReFollowedByListParser(commonTokenStream);
+        ParseTree parseTree = parser.s();
+
+        ThompsonNFAEvalVisitor visitor = new ThompsonNFAEvalVisitor();
+        ThompsonNFASynthAttr a = visitor.visit(parseTree);
+        assertEquals(a.getResult(), "OK, KO, OK, KO");
     }
 }

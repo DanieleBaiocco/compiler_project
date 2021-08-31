@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Rappresenta uno stato in un automa a stati finiti non deterministico Thompson.
+ * Questo può essere iniziale, finale o intermedio e ha una lista di transizioni e un nome a esso associati.
+ */
 public class NFAState {
 
     private StateEnum state;
@@ -36,6 +40,9 @@ public class NFAState {
         this.transitions.add(transition);
     }
 
+    /**
+     * Override del metodo equals; due NFAState sono uguali secondo equals se hanno lo stesso nome.
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -49,6 +56,9 @@ public class NFAState {
         return Objects.equals(this.name, other.name);
     }
 
+    /**
+     * Override dell'hashCode che genera l'hash utilizzando il nome dell'NFAState.
+     */
     @Override
     public int hashCode() {
         int hash = 3;

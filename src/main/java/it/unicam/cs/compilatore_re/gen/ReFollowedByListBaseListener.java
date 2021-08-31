@@ -157,6 +157,30 @@ public class ReFollowedByListBaseListener implements ReFollowedByListListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFromListToSequence(ReFollowedByListParser.FromListToSequenceContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDigitFollowedByString(ReFollowedByListParser.DigitFollowedByStringContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDigitFollowedByString(ReFollowedByListParser.DigitFollowedByStringContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSingleDigit(ReFollowedByListParser.SingleDigitContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSingleDigit(ReFollowedByListParser.SingleDigitContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

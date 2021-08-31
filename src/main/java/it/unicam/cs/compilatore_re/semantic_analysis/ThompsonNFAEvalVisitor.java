@@ -70,20 +70,20 @@ public class ThompsonNFAEvalVisitor extends ReFollowedByListBaseVisitor<Thompson
 
     @Override
     public ThompsonNFASynthAttr visitSequenceFollowedByList(SequenceFollowedByListContext ctx) {
-        String s  = ctx.SEQUENCE().getText();
+        String s  = ctx.string().getText();
         ThompsonNFASynthAttr t = visit(ctx.stringsToCheck());
         String result = "";
         if(this.finalnfa.accept(s))
-            result = "OK , ";
+            result = "OK, ";
         else
-            result = "KO , ";
+            result = "KO, ";
         String toReturn = result.concat(t.getResult());
         return new ThompsonNFASynthAttr(toReturn);
     }
 
     @Override
     public ThompsonNFASynthAttr visitFromListToSequence(FromListToSequenceContext ctx) {
-        String s  = ctx.SEQUENCE().getText();
+        String s  = ctx.string().getText();
         String result = "";
         if(this.finalnfa.accept(s))
             result = "OK";
